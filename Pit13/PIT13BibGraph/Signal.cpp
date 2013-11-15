@@ -1,63 +1,63 @@
 //Erstellt von Thorben
 
+#include "stdafx.h"
 #include <iostream>
 #include <string>
-#include <vector>
+#include "Signal.h"
 using namespace std;
 
-#include "Signal.h"
-
-	Signal::Signal() {
-		signalTyp = unbekannt;
-		quelle = "NULL";
-		quellenTyp = "NULL";
-		for ( int i = 0 ; i <= anzahlZiele ; i++ ) {
-			ziele[i] = "NULL";
+Signal::Signal() {
+		signalTyp=unbekannt;
+		quelle="NULL";
+		quellenTyp="NULL";
+		for (int i=0; i<=anzahlZiele; i++) {
+			ziele[i]="NULL";
 		}
-		int anzahlZiele = 0;
+		anzahlZiele=0;
 	}
 	
-	Signal::~Signal() {
+Signal::~Signal() {
 	}
 
-	int Signal::getAnzahlZiele() {
+int Signal::getAnzahlZiele() {
 		return anzahlZiele;
 	}
 
-	std::string Signal::getQuelle() {
+std::string Signal::getQuelle() {
 		return quelle;
 	}
 
-	std::string Signal::getQuellentyp() {
+std::string Signal::getQuellentyp() {
 		return quellenTyp;
 	}
 
-	std::string Signal::getZiel(int pos) {
+std::string Signal::getZiel(int pos) {
 		return ziele[pos];
 	}
 
-	Signal::signalTypen Signal::getSignalTyp() {
+signalTypen Signal::getSignalTyp() {
 		return signalTyp;
 	}
 
-	void Signal::setAnzahlZiele(int Ziele) {
-		anzahlZiele = Ziele;
+void Signal::setAnzahlZiele(int Ziele) {
+		anzahlZiele=Ziele;
 	}
 
-	void Signal::setQuelle (std::string gatterName) {
-		quelle = gatterName;
+void Signal::setQuelle (std::string gatterName) {
+		quelle=gatterName;
 	}
 
-	void Signal::setQuellenTyp (std::string gatterTyp) {
-		quellenTyp = gatterTyp;
+void Signal::setQuellenTyp (std::string gatterTyp) {
+		quellenTyp=gatterTyp;
 	}
 
-	void Signal::zielHinzufuegen (std::string gatterName, int pos) {
-		ziele[pos] = gatterName;
+void Signal::zielHinzufuegen (std::string gatterName, int pos) {
+		ziele[pos]=gatterName;
 
 	}
 
 
-	void Signal::setSignalTyp (signalTypen sigTyp) {
-		signalTyp = sigTyp;
+void Signal::setSignalTyp (signalTypen sigTyp) {
+		signalTyp=sigTyp;
+		
 	}
