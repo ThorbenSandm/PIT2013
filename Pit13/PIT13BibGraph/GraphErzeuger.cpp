@@ -3,7 +3,10 @@
 #include "GraphErzeuger.h";
 
 GraphErzeuger::GraphErzeuger( Signal* signalListe , short laenge ){
-
+	bibliothek = new Bibliothek;
+	bibliothek->pfadEinlesen( "C:\\bib.txt" );
+	bibliothek->dateiAuswerten();
+	cout << "bib.txt ausgewertet" << endl;
 	anzahlSignale = laenge;
 	startElement = NULL;
 	endElement = NULL;
@@ -14,13 +17,12 @@ GraphErzeuger::GraphErzeuger( Signal* signalListe , short laenge ){
 void GraphErzeuger::ListeErstellen(){
 
 	GatterTyp* typ ;//=  new GatterTyp;
-	string such;
 	ListenElement* temp;
+
 	for( int i = 0 ; i < anzahlSignale ; i++){
 
 		ListenElement* LE = new ListenElement;  // wie kann ich viele davon erzeugen? klappt das evtl so?
-		such = signale[i].getQuellentyp();
-	//	// typ = suche nach "such" in der Bibliothek und Rückgabe eines Zeigers auf den GatterTyp
+		typ = bibliothek->getBibElement( signale[i].getQuellentyp() );	// typ = suche nach "such" in der Bibliothek und Rückgabe eines Zeigers auf den GatterTyp
 		SchaltwerkElement* SE = new SchaltwerkElement( typ );
 		SE->setName( signale[i].getQuelle() );
 

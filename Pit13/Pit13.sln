@@ -7,6 +7,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pit13Menue", "Pit13Menue\Pi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pit13Faktoren", "Pit13Faktoren\Pit13Faktoren.vcxproj", "{A626B09F-EB41-4B91-B557-BE406DEA60A6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PIT13Bib", "PIT13Bib\PIT13Bib.vcxproj", "{3C276599-8EBE-4B1C-BD99-188837F8AF44}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PIT13BibGraph", "PIT13BibGraph\PIT13BibGraph.vcxproj", "{67CA9900-8D33-4CBD-B84C-D6DDB7CF6371}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -25,6 +29,14 @@ Global
 		{A626B09F-EB41-4B91-B557-BE406DEA60A6}.Debug|Win32.Build.0 = Debug|Win32
 		{A626B09F-EB41-4B91-B557-BE406DEA60A6}.Release|Win32.ActiveCfg = Release|Win32
 		{A626B09F-EB41-4B91-B557-BE406DEA60A6}.Release|Win32.Build.0 = Release|Win32
+		{3C276599-8EBE-4B1C-BD99-188837F8AF44}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3C276599-8EBE-4B1C-BD99-188837F8AF44}.Debug|Win32.Build.0 = Debug|Win32
+		{3C276599-8EBE-4B1C-BD99-188837F8AF44}.Release|Win32.ActiveCfg = Release|Win32
+		{3C276599-8EBE-4B1C-BD99-188837F8AF44}.Release|Win32.Build.0 = Release|Win32
+		{67CA9900-8D33-4CBD-B84C-D6DDB7CF6371}.Debug|Win32.ActiveCfg = Debug|Win32
+		{67CA9900-8D33-4CBD-B84C-D6DDB7CF6371}.Debug|Win32.Build.0 = Debug|Win32
+		{67CA9900-8D33-4CBD-B84C-D6DDB7CF6371}.Release|Win32.ActiveCfg = Release|Win32
+		{67CA9900-8D33-4CBD-B84C-D6DDB7CF6371}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
