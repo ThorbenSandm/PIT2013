@@ -1,24 +1,30 @@
-#ifndef Signal_H
-#define Signal_H
-
+#ifndef SIGNAL_H
+#define SIGNAL_H
+#include "stdafx.h"
 #include <iostream>
 #include <string>
-#include <vector>
+#include "signalTypen.h"
+
 
 
 class Signal {
 private:
-	int anzahlZiele;
-	enum signalTypen {eingang, intern, ausgang, unbekannt};
-	signalTypen signalTyp;
+	
+	
 	std::string quelle;
 	std::string quellenTyp;
-	std::string ziele[2]; // muessen das nicht 5 sein?
+	std::string ziele[5];
+	int anzahlZiele;	
+	signalTypen signalTyp;
 	
 	
 public:
+	
 	Signal();
 	~Signal();
+	
+	
+	
 	int getAnzahlZiele();
 	signalTypen getSignalTyp();
 	std::string getQuelle();
@@ -29,6 +35,7 @@ public:
 	void setQuelle (std::string gatterName);
 	void setQuellenTyp (std::string gatterTyp);
 	void zielHinzufuegen (std::string gatterName, int pos);
+	
 
 };
 #endif
