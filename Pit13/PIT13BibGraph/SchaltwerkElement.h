@@ -8,10 +8,7 @@
 #include <iostream>
 using namespace std;
 
-
 #include "GatterTyp.h";
-
-
 
 class SchaltwerkElement{	
 
@@ -42,6 +39,7 @@ public:
 	inline void nachfolgerHinzufuegen( SchaltwerkElement* schaltwerkElement , int pos ) { nachfolgerElemente[pos] = schaltwerkElement; } 
 	inline void setAnzahlNachfolger( int anzahlN ) { anzahlNachfolger = anzahlN; }
 	inline void setAnzahlEingangssignale( short anzahlE ) { anzahlEingangssignale = anzahlE; }
+	inline void AnzahlEingangssignaleErhoehen(){ anzahlEingangssignale++; }
 	inline void setIsEingangselement( bool isEingangsEl ) { isEingangsElement = isEingangsEl; }
 	inline void setIsAusgangsElement( bool isAusgangsEl ) { isAusgangsElement = isAusgangsEl; }
 	inline void setLaufzeitEinzelgatter( double lfz )  { laufzeitEinzelgatter = lfz; }

@@ -19,7 +19,7 @@ void GraphErzeuger::ListeErstellen(){
 	GatterTyp* typ ;//=  new GatterTyp;
 	ListenElement* temp;
 
-	for( int i = 0 ; i < anzahlSignale ; i++){
+	for( int i = 0 ; i < anzahlSignale ; i++ ){
 
 		ListenElement* LE = new ListenElement;  // wie kann ich viele davon erzeugen? klappt das evtl so?
 		typ = bibliothek->getBibElement( signale[i].getQuellentyp() );	// typ = suche nach "such" in der Bibliothek und Rückgabe eines Zeigers auf den GatterTyp
@@ -68,6 +68,7 @@ void GraphErzeuger::GraphErstellen(){ // Es fehlt noch die Ueberpruefung auf unb
 			if( LE->getSchaltwerkElement()->getName() == such ){
 
 				quelle->nachfolgerHinzufuegen( LE->getSchaltwerkElement() , e );
+				LE->getSchaltwerkElement()->AnzahlEingangssignaleErhoehen();
 				break;
 			}
 

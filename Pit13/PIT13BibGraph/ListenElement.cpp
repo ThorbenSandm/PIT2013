@@ -4,7 +4,7 @@
 
 ListenElement::ListenElement(){
 
-	ListenElement::next = nullptr; //warum geht NULL nicht?
-	//ListenElement::schaltwerkElement = nullptr;
+	ListenElement::next = NULL; 
+	ListenElement::schaltwerkElement = NULL;
 
 }
