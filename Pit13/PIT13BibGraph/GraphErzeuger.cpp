@@ -40,12 +40,12 @@ void GraphErzeuger::ListeErstellen(){
 
 }
 
-void GraphErzeuger::GraphErstellen(){ // Es fehlt noch die Ueberpruefung auf unbenutzte Signale, unbeschaltete Gattereingaenge oder Gatter, die Ziel von zu vielen Signalen  sind
+void GraphErzeuger::GraphErstellen(){ // Es fehlt noch die Ueberpruefung auf unbenutzte Signale ( signal ohne ziele? oder was?)
 
 	string such;
 	SchaltwerkElement* quelle;
 
-	for( int i = 0 ; i < anzahlSignale ; i++){
+	for( int i = 0 ; i < anzahlSignale ; i++){ //suche nach dem ausgangsschaltwelement in der Liste
 
 		such = signale[i].getQuelle();
 
@@ -59,7 +59,8 @@ void GraphErzeuger::GraphErstellen(){ // Es fehlt noch die Ueberpruefung auf unb
 
 		}
 
-		for( int e = 0 ; e < signale[i].getAnzahlZiele() ; e++ ){
+		
+		for( int e = 0 ; e < signale[i].getAnzahlZiele() ; e++ ){ // suche nach jedem ziel im zielearray
 
 			such = signale[i].getZiel( e );
 
@@ -71,15 +72,38 @@ void GraphErzeuger::GraphErstellen(){ // Es fehlt noch die Ueberpruefung auf unb
 				LE->getSchaltwerkElement()->AnzahlEingangssignaleErhoehen();
 				break;
 			}
-
+			
 		}
+			
 		}
 
 		
 
 	}
 
+	Eingaengepruefen();
+
 	}
+
+void GraphErzeuger::Eingaengepruefen(){ // nicht in der Aufgabenstellung beschrieben --> muss in Dokumentation
+
+	short anzahlEingangsSignale;
+	short anzahlEingaenge;
+	for( ListenElement* LE = new ListenElement ; LE != NULL ; LE = LE->getNextelement() ){ 
+		
+		anzahlEingangsSignale = LE->getSchaltwerkElement()->getAnzahlEingangssignale();
+		anzahlEingaenge = LE->getSchaltwerkElement()->getTyp().getEingaenge();
+		if( (anzahlEingangsSignale < anzahlEingaenge)|| (anzahlEingangsSignale > anzahlEingaenge)){ // zu viele oder zu wenige angelegte Signale
+
+			cout << "ERROR!" << endl;
+			cout << "Anzahl der Schaltwerkelementseingaenge: " << anzahlEingaenge << endl;
+			cout << "Anzahl der am Schaltwerk angelegten Signale: " << anzahlEingangsSignale << endl;
+			}
+
+		}
+
+}
+
 
 
 

@@ -18,6 +18,7 @@ private:
 	ListenElement* endElement;
 	Signal* signale;
 	short anzahlSignale;
+	void Eingaengepruefen();
 
 public:
 	GraphErzeuger( Signal* signalliste , short laenge );
